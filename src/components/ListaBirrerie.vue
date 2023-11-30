@@ -17,13 +17,16 @@ export default {
 };
 </script>
 
-
 <template>
   <div>
     <h1>Elenco delle Birrerie in Polonia</h1>
     <ul>
       <li v-for="birreria in birrerie" :key="birreria.id">
-        {{ birreria.name }}
+        <h2>{{ birreria.name }}</h2>
+        <p>Posizione: {{ birreria.country }}</p>
+        <p>Coordinate: {{ birreria.latitude }}, {{ birreria.longitude }}</p>
+        <p>Indirizzo: {{ birreria.adress1 }}, {{ birreria.city }}, {{ birreria.state_province }}, {{ birreria.postal_code }}</p>
+        <hr>
       </li>
     </ul>
   </div>
